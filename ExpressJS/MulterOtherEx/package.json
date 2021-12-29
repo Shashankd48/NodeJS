@@ -1,0 +1,20 @@
+{
+  "name": "multer-files",
+  "version": "1.0.0",
+  "description": "This example control single, multiple and multiple fields and files upload example",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "shashasnk",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Test</title>
+</head>
+<body>
+    <div class="container">
+        <p class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, ut.</p>
+        <p class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, ut.</p>
+
+
+        <p id="xyz">Lorem ipsum dolor sit amet.</p>
+
+        <button class="btn btn-primary" onclick="classChange()">Change With Class</button>
+
+        <button class="btn btn-primary" onclick="idChange()">Change with Id</button>
+
+        <br><br>
+        <form action="#" id="myform">
+            <input type="text" id="one" name="one" value="abc">
+            <br><br>
+            <input type="text" id="two" name="two">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function idChange() {
+            var p = document.getElementById('xyz');
+            p.innerHTML = 'Hello';
+            // p.innerText = "Id changed This"
+        }
+        function classChange() {
+            var p = document.getElementsByClassName('abc');
+            // You have to tell which para you want to change
+            for(let i=0; i<p.length; i++)
+            p[i].innerHTML = 'Class Changed';
+            // p.innerText = "Class Changed this"
+        }
+
+        let x = document.forms['myform'];
+        console.log(x.length);
+        console.log(x);
+        console.log(x.elements[0].value)
+        console.log(x.elements[1].value)
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

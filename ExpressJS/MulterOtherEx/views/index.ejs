@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>File upload through Multer</title>
+    <style>
+        .card-image-top{
+            height: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-muted text-center my-4">Multer Files Upload</h1>
+        <div class="row">
+            <!-- first file upload card goes here -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="text-muted text-center my-3">Single File Upload</h5>
+
+                <div class="card" style="width: 20rem;">
+                    <img src="https://images.pexels.com/photos/3810725/pexels-photo-3810725.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-image-top" alt="First Image goes here">
+                    <div class="card-body">
+                        <h5 class="card-title">Jenifer's Profile</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas quam corrupti expedita illo reiciendis!</p>
+
+                        <form action="/singleFile" method="POST" enctype="multipart/form-data">
+                            <div class="custom-file">
+                                <input type="file" name="profilepic" class="custom-file-input" id="customFile" required>
+                                <label class="custom-file-label" for="customFile">Choose profile pic</label>
+                            </div>
+                            <button type="submit" href="#" class="btn mt-3 btn-warning">Change Picture</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="text-muted text-center my-3">Multiple Files Upload</h5>
+
+                <div class="card" style="width: 20rem;">
+                    <img src="https://images.pexels.com/photos/1851415/pexels-photo-1851415.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-image-top" alt="First Image goes here">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Jenifer's Profile</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas quam corrupti expedita illo reiciendis!</p>
+
+                        <form action="/multipleFiles" method="POST" enctype="multipart/form-data">
+                            <div class="custom-file">
+                                <input type="file" name="allFiles" class="custom-file-input" id="customFile" required multiple>
+                                <label class="custom-file-label" for="customFile">Select files</label>
+                            </div>
+                            <button type="submit" href="#" class="btn mt-3 btn-warning">Upload all files</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="text-muted text-center my-3">Mutiple Files with Fields Upload</h5>
+
+                <div class="card" style="width: 20rem;">
+                    <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-image-top" alt="First Image goes here">
+                    <div class="card-body">
+                        <h5 class="card-title">Jenifer's Profile</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas quam corrupti expedita illo reiciendis!</p>
+                        <a href="#" class="btn btn-warning">About Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
